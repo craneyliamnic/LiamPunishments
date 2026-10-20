@@ -1,0 +1,88 @@
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+.gradle/
+.kotlin/
+build/
+/out/
+/*/out/
+/bin/
+/*/bin/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/**/build/
+
+# Local test servers created by run-paper / run-velocity
+/run/
+/*/run/
+
+# ---------------------------------------------------------------------------
+# IDEs and editors
+# ---------------------------------------------------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# Operating system files
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------------------------------------------------------------------------
+# Logs, crash reports, local databases
+# ---------------------------------------------------------------------------
+*.log
+hs_err_pid*.log
+replay_pid*.log
+*.db
+*.mv.db
+*.trace.db
+
+# ---------------------------------------------------------------------------
+# Secrets and local configuration
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+local.properties
+gradle-local.properties
+
+# ---------------------------------------------------------------------------
+# AI assistant files (sessions, notes, local instructions)
+# ---------------------------------------------------------------------------
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.mcp.json
+HANDOFF.md
+REVIEW.md
+AGENTS.md
+GEMINI.md
+.gemini/
+.codex/
+.junie/
+.aiassistant/
+.cursor/
+.cursorrules
+.windsurf/
+.windsurfrules
+.clinerules
+.roo/
+.continue/
+.aider*
+.copilot/
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/

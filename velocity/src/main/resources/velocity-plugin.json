@@ -1,0 +1,10 @@
+{
+  "id": "liampunishments",
+  "name": "LiamPunishments",
+  "version": "${version}",
+  "description": "A modern punishment plugin for Paper, Folia and Velocity.",
+  "url": "https://liamhq.dev",
+  "authors": ["compileOnlyLiam"],
+  "dependencies": [],
+  "main": "dev.liamhq.liampunishments.velocity.LiamPunishmentsVelocity"
+}

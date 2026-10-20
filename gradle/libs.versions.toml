@@ -1,0 +1,26 @@
+[versions]
+minecraft = "26.3"
+paper = "26.3.build.207-stable"
+velocity = "4.3.0"
+jspecify = "1.0.1"
+junit = "6.1.3"
+assertj = "3.27.7"
+shadow = "9.6.1"
+run-task = "3.1.0"
+spotless = "8.10.4"
+
+[libraries]
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+velocity-api = { module = "com.velocitypowered:velocity-api", version.ref = "velocity" }
+jspecify = { module = "org.jspecify:jspecify", version.ref = "jspecify" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+# Plugins used by the build-logic convention plugins
+shadow-gradle = { module = "com.gradleup.shadow:shadow-gradle-plugin", version.ref = "shadow" }
+spotless-gradle = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+
+[plugins]
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-task" }
+run-velocity = { id = "xyz.jpenilla.run-velocity", version.ref = "run-task" }

@@ -1,0 +1,13 @@
+# Normalize line endings to LF in the repository and working tree (gradlew requires LF).
+* text=auto eol=lf
+
+# Windows scripts must keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files.
+*.jar binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary

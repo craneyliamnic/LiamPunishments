@@ -1,0 +1,14 @@
+name: LiamPunishments
+version: '${version}'
+main: dev.liamhq.liampunishments.paper.LiamPunishmentsPlugin
+bootstrapper: dev.liamhq.liampunishments.paper.LiamPunishmentsBootstrap
+description: A modern punishment plugin for Paper, Folia and Velocity.
+authors: [compileOnlyLiam]
+website: https://liamhq.dev
+api-version: '${apiVersion}'
+folia-supported: true
+
+permissions:
+  liampunishments.command.info:
+    description: Allows viewing plugin information with /liampunishments.
+    default: op

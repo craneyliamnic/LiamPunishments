@@ -1,0 +1,39 @@
+name: Bug report
+description: Something does not work as expected.
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened, and what did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run `/ban ...`
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: LiamPunishments version
+    validations:
+      required: true
+  - type: input
+    id: server-version
+    attributes:
+      label: Server software and version
+      description: Output of `/version` (Paper, Folia or Velocity).
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant console output or a link to a paste (e.g. mclo.gs).
+      render: text
