@@ -26,10 +26,7 @@ import com.velocitypowered.api.plugin.PluginDescription;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 
-/**
- * The proxy-side administration command. It uses its own label so it does not shadow the backend
- * {@code /liampunishments} command when both plugins are installed.
- */
+// Own label so the proxy does not intercept the backend /liampunishments command.
 public final class RootCommand {
 
     public static final String LABEL = "liampunishmentsproxy";

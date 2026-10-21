@@ -26,7 +26,6 @@ import java.util.List;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 
-/** The {@code /liampunishments} administration command, also available as {@code /punish}. */
 public final class RootCommand {
 
     public static final String LABEL = "liampunishments";

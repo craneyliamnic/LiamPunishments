@@ -1,6 +1,4 @@
-# ---------------------------------------------------------------------------
 # Build output
-# ---------------------------------------------------------------------------
 .gradle/
 .kotlin/
 build/
@@ -11,13 +9,10 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/**/build/
 
-# Local test servers created by run-paper / run-velocity
 /run/
 /*/run/
 
-# ---------------------------------------------------------------------------
 # IDEs and editors
-# ---------------------------------------------------------------------------
 .idea/
 *.iml
 *.ipr
@@ -30,18 +25,14 @@ build/
 *.swp
 *~
 
-# ---------------------------------------------------------------------------
 # Operating system files
-# ---------------------------------------------------------------------------
 .DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# ---------------------------------------------------------------------------
-# Logs, crash reports, local databases
-# ---------------------------------------------------------------------------
+# Logs and local databases
 *.log
 hs_err_pid*.log
 replay_pid*.log
@@ -49,9 +40,7 @@ replay_pid*.log
 *.mv.db
 *.trace.db
 
-# ---------------------------------------------------------------------------
 # Secrets and local configuration
-# ---------------------------------------------------------------------------
 .env
 .env.*
 *.pem
@@ -59,9 +48,7 @@ replay_pid*.log
 local.properties
 gradle-local.properties
 
-# ---------------------------------------------------------------------------
-# AI assistant files (sessions, notes, local instructions)
-# ---------------------------------------------------------------------------
+# AI assistants
 .claude/
 CLAUDE.md
 CLAUDE.local.md

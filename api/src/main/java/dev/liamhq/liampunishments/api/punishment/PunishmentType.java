@@ -17,15 +17,10 @@
  */
 package dev.liamhq.liampunishments.api.punishment;
 
-/** The kinds of punishment that can be issued against a player. */
 public enum PunishmentType {
-    /** Prevents the player from joining. May be permanent or temporary. */
     BAN(true),
-    /** Prevents the player from chatting. May be permanent or temporary. */
     MUTE(true),
-    /** A recorded warning. May expire so it stops counting towards escalation. */
     WARN(true),
-    /** Removes the player from the server once. Has no duration. */
     KICK(false);
 
     private final boolean hasDuration;
@@ -34,7 +29,6 @@ public enum PunishmentType {
         this.hasDuration = hasDuration;
     }
 
-    /** Whether punishments of this type stay in effect over a period of time. */
     public boolean hasDuration() {
         return hasDuration;
     }

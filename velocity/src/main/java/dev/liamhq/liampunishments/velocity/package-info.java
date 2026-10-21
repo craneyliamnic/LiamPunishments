@@ -1,4 +1,3 @@
-/** Velocity platform entry point. */
 @NullMarked
 package dev.liamhq.liampunishments.velocity;
 

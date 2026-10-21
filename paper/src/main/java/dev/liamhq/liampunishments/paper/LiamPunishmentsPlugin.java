@@ -19,8 +19,4 @@ package dev.liamhq.liampunishments.paper;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Plugin main class for Paper and Folia. Commands are registered in {@link LiamPunishmentsBootstrap}; services are
- * wired here as features are added.
- */
 public final class LiamPunishmentsPlugin extends JavaPlugin {}

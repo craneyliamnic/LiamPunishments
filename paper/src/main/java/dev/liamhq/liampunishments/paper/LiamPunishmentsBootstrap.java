@@ -22,7 +22,6 @@ import io.papermc.paper.plugin.bootstrap.BootstrapContext;
 import io.papermc.paper.plugin.bootstrap.PluginBootstrap;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
 
-/** Runs before the server loads worlds; registers Brigadier commands so they exist from the first tick. */
 public final class LiamPunishmentsBootstrap implements PluginBootstrap {
 
     @Override

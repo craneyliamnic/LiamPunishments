@@ -22,17 +22,6 @@ import java.util.Objects;
 import java.util.UUID;
 import org.jspecify.annotations.Nullable;
 
-/**
- * An issued punishment.
- *
- * @param id the unique, storage-assigned identifier
- * @param type the kind of punishment
- * @param target the punished player
- * @param operator the staff member who issued it, or {@code null} for the console
- * @param reason the reason shown to the player and in the history
- * @param issuedAt when the punishment was issued
- * @param expiresAt when the punishment ends, or {@code null} if it is permanent; always {@code null} for kicks
- */
 public record Punishment(
         long id,
         PunishmentType type,
@@ -61,12 +50,10 @@ public record Punishment(
         }
     }
 
-    /** Whether this punishment never expires. Always {@code false} for types without a duration. */
     public boolean isPermanent() {
         return type.hasDuration() && expiresAt == null;
     }
 
-    /** Whether this punishment is in effect at the given instant. Kicks are never in effect. */
     public boolean isActiveAt(Instant instant) {
         Objects.requireNonNull(instant, "instant");
         if (!type.hasDuration() || instant.isBefore(issuedAt)) {

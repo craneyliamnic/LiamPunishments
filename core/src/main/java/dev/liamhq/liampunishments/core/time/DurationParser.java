@@ -24,29 +24,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.jspecify.annotations.Nullable;
 
-/**
- * Parses and formats compact durations such as {@code 1d12h} or {@code 2w}.
- *
- * <p>Supported units: {@code y} (365 days), {@code mo} (30 days), {@code w}, {@code d}, {@code h}, {@code m},
- * {@code s}. Units are case-insensitive and must appear at most once each, in descending order.
- */
 public final class DurationParser {
 
-    /**
-     * The longest duration accepted by {@link #parse(String)}. Anything beyond this is effectively permanent and
-     * risks overflowing timestamps once added to the current time; issue a permanent punishment instead.
-     */
+    // Longer durations can overflow expiry timestamps; issue a permanent punishment instead.
     public static final Duration MAXIMUM = Duration.ofDays(365L * 1000);
 
     private static final Pattern SEGMENT = Pattern.compile("(\\d+)(mo|[ywdhms])");
 
     private DurationParser() {}
 
-    /**
-     * Parses a compact duration.
-     *
-     * @throws IllegalArgumentException if the input is empty, malformed, zero, or longer than {@link #MAXIMUM}
-     */
     public static Duration parse(String input) {
         Objects.requireNonNull(input, "input");
         String normalized = input.strip().toLowerCase(Locale.ROOT);
@@ -88,12 +74,6 @@ public final class DurationParser {
         return total;
     }
 
-    /**
-     * Formats a duration in the same notation, separated by spaces, e.g. {@code 1d 12h}. Sub-second parts are
-     * dropped.
-     *
-     * @throws IllegalArgumentException if the duration is negative
-     */
     public static String format(Duration duration) {
         Objects.requireNonNull(duration, "duration");
         if (duration.isNegative()) {
@@ -118,7 +98,7 @@ public final class DurationParser {
         return builder.toString();
     }
 
-    /** Units ordered from largest to smallest. */
+    // Declaration order matters: parse() and format() rely on largest-to-smallest ordinals.
     private enum Unit {
         YEARS("y", Duration.ofDays(365)),
         MONTHS("mo", Duration.ofDays(30)),

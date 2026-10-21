@@ -1,4 +1,3 @@
-/** Brigadier command trees for Velocity. */
 @NullMarked
 package dev.liamhq.liampunishments.velocity.command;
 

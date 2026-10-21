@@ -24,7 +24,6 @@ import com.velocitypowered.api.plugin.PluginContainer;
 import com.velocitypowered.api.proxy.ProxyServer;
 import dev.liamhq.liampunishments.velocity.command.RootCommand;
 
-/** Plugin main class for Velocity. Metadata lives in {@code velocity-plugin.json}. */
 public final class LiamPunishmentsVelocity {
 
     private final ProxyServer server;
